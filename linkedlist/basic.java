@@ -54,12 +54,65 @@ static class sll{
     
   }
 
+  void get(int pos){
+    node temp = head;
+    int idx=1;
+    while(idx<=pos){
+      
+      temp=temp.next;
+      idx++;
+    }
+    System.out.println(temp.val);
+
+  }
+
+  void set(int pos,int value){
+    node temp=head;
+    int idx=1;
+    while(idx<=pos){
+      temp=temp.next;
+      idx++;
+    }
+    temp.val=value;
+    
+  }
+
+  void deleteathead(){
+    if(head!=null){
+    head=head.next;
+    size--;}
+  }
+
+  void deleteatany(int pos){
+    if(pos==0){
+      deleteathead();
+      return;
+    }
+    if(pos!=0){
+    node temp=head;
+    int idx=1;
+    while(idx<pos){
+      temp=temp.next;
+      idx++;
+    }
+  
+    if(temp.next==tail){
+      tail=temp;
+      
+    }
+    temp.next=temp.next.next;
+  }
+  
+  
+  }
+
   void print(){
     node temp=head;
     while(temp!=null){
       System.out.print(temp.val+" ");
       temp=temp.next;
     }
+    System.out.println();
   }
 }
 
@@ -69,16 +122,20 @@ static class sll{
     s.insertattail(12);
     s.insertattail(15);
     s.print();
-    System.out.println();
+    
     s.insertathead(5);
     s.insertathead(40);
     s.print();
-    System.out.println();
+    
     s.insertatany(3,60);
     s.print();
-
-    
-
-
+    s.get(4);
+    s.set(4,69);
+    s.print();
+    s.deleteathead();
+    s.print();
+    s.deleteatany(2);
+    s.print();
+    System.out.println(s.tail.val);
   }
 }
