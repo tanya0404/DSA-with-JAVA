@@ -103,7 +103,17 @@ static class sll{
     temp.next=temp.next.next;
   }
   
-  
+  }
+
+  void midele(){
+    node slow=head;
+    node fast=head;
+
+    while (fast!=null && fast.next!=null){
+      slow=slow.next;
+      fast=fast.next.next;
+    }
+    System.out.println(slow.val);
   }
 
   void print(){
@@ -137,5 +147,6 @@ static class sll{
     s.deleteatany(2);
     s.print();
     System.out.println(s.tail.val);
+    s.midele();
   }
 }
