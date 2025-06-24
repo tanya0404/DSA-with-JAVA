@@ -4,7 +4,7 @@
   
 // }
 
-1.Largest element in array
+Largest element in array
 
 class Solution {
     public static int largest(int[] arr) {
