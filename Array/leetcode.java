@@ -104,3 +104,32 @@
         
 //     }
 // }
+
+
+
+
+// 189. Rotate Array
+
+// class Solution {
+//     void swap(int[] nums,int l,int h){
+//         while(l<h){
+//             int temp=nums[l];
+//             nums[l]=nums[h];
+//             nums[h]=temp;
+//             l++;
+//             h--;
+//         }
+//         }
+
+//     public void rotate(int[] nums, int k) {
+//         int n = nums.length;
+
+//         if (n <= 1 || k == 0) return;
+
+//         k = k % n;
+//         swap(nums,0,n-1);
+//         swap(nums,0,k-1);
+//         swap(nums,k,n-1);
+        
+//     }
+// }
