@@ -70,50 +70,94 @@ public class stack {
 
 
 
-  public static class Stack{
-      int s;
-      int idx=0;
-      Stack(int s){
-        this.s=s;
-      }
-      int[] arr=new int[s];
+  // public static class Stack{
+  //     int s;
+  //     int idx=0;
+  //     Stack(int s){
+  //       this.s=s;
+  //     }
+  //     int[] arr=new int[s];
 
-      boolean isfull(){
-        return idx==s;
-      }
-      void push(int val){
-        if(isfull()){
-          System.out.println("overflow");
-        }
-        else{
-          arr[idx]=val;
-          idx++;
-        }
+  //     boolean isfull(){
+  //       return idx==s;
+  //     }
+  //     void push(int val){
+  //       if(isfull()){
+  //         System.out.println("overflow");
+  //       }
+  //       else{
+  //         arr[idx]=val;
+  //         idx++;
+  //       }
         
-      }
-      int pop(){
-        if(idx<0) System.out.println("inflow");
-        else{
-          idx--;
-        }
-        return arr[idx];
-      }
+  //     }
+  //     int pop(){
+  //       if(idx<0) System.out.println("inflow");
+  //       else{
+  //         idx--;
+  //       }
+  //       return arr[idx];
+  //     }
 
-      int peek(){
-        if(idx==0) System.out.println("stack is empty");
+  //     int peek(){
+  //       if(idx==0) System.out.println("stack is empty");
         
-      }
+  //     }
 
 
+  //   }
+  // public static void main(String[] args) {
+  //   Stack st=new Stack(5);
+  // st.push(1);
+  // // st.push(2);
+  // // st.push(3);
+  // // st.push(4);
+  // // st.push(5);
+  //   System.out.println(st);
+  // }
+
+
+
+  static Stack<Integer> reverse(Stack<Integer> s){
+    Stack<Integer> temp=new Stack<>();
+    while (!s.isEmpty()) {
+      temp.push(s.pop());
     }
+    return temp;
+  }
+
+
+  static Stack<Integer> copy(Stack<Integer> s){
+    Stack<Integer> temp=reverse(s);
+    Stack<Integer> copy=new Stack<>();
+    while (!temp.isEmpty()) {
+      copy.push(temp.pop());
+    }
+    return copy;
+  }
+
+  static Stack<Integer> insertatany(Stack<Integer> s,int pos){
+    int size=s.size();
+    Stack<Integer> temp=new Stack<>();
+    while (!s.isEmpty()) {
+      temp.push((s.pop()));
+    }
+    Stack<Integer> ori=new Stack<>();
+    for(e)
+    }
+
   public static void main(String[] args) {
-    Stack st=new Stack(5);
-  st.push(1);
-  // st.push(2);
-  // st.push(3);
-  // st.push(4);
-  // st.push(5);
-    System.out.println(st);
+    Stack<Integer> stack=new Stack<>();
+
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+    stack.push(4);
+    // stack.pop();
+    System.out.println(stack);
+    // System.out.println(reverse(stack));
+    System.out.println(copy(stack));
+    
   }
 }
 

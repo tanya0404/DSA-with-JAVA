@@ -150,25 +150,44 @@ public class basic{
 //     s.midele();
 //   }
 
+// class node{
+//   int data;
+//   node next;
 
-static class node{
-  int val;
-  node next;
-  node(int val){
-    this.val=val;
-  }
+//   node(int data){
+//     this.data=data;
+//   }
+  
+//   static class sll{
+//     node head=null;
+//     node tail=null;
+//     int size=0;
 
-  static class sll{
-    node head=null;
-    node tail=null;
-    int size=0; 
+//     void insertathead(int data){
+//       node temp=new node(data);
+//       if(head==null){
+//         head=temp;
+//         tail=temp;
+//       }
+//       else{
+//         temp.next=head;
+//         temp=head;
+//       }
+//     } 
 
-  void insertathead(int val){
-    node temp=new node(val);
-    if(head==null){
+//     void display(){
+//       node temp=head;
+//       while(temp!=null){
+//         System.out.print(temp.data+" ");
+//         temp=temp.next;
+//       }
+//     }
     
-    }
-  } 
-}
-}
-}
+//   }
+  
+// }
+// public static void main(String[] args) {
+// sll s=new sll();
+// s.insertathead(10);
+// }
+// }
