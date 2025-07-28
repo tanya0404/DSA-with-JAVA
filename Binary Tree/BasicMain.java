@@ -1,4 +1,4 @@
-public class basic {
+public class BasicMain {
 // public static class node{
 //     int data;
 //     node left;
@@ -131,13 +131,13 @@ public class basic {
 // }
 
 //     static int max=Integer.MIN_VALUE;
-//     public static void displaymax(node root){
-//         if(root==null) return;
-//         if(root.data>max) max=root.data;
-//         displaymax(root.left);
-//         displaymax(root.right);
+    // public static void displaymax(node root){
+    //     if(root==null) return;
+    //     if(root.data>max) max=root.data;
+    //     displaymax(root.left);
+    //     displaymax(root.right);
 
-//     }
+    // }
 
 //     public static void main(String[] args) {
 //         node a=new node(1);
@@ -165,6 +165,56 @@ public class basic {
 
 
 
+// public static class node{
+//     int data;
+//     node left;
+//     node right;
+
+//     node(int data){
+//         this.data=data;
+//     }
+// }
+
+// public static int displaysize(node root){
+        
+//         if (root==null) return 0;
+//         return 1+displaysize(root.left)+displaysize(root.right);
+
+//     }
+
+//     static int cnt = 0;
+//      public static void size(node root){
+//         if(root==null) return;
+//         if(root.data > Integer.MIN_VALUE ) cnt++;
+//         size(root.left);
+//         size(root.right);
+
+//     }
+
+//     public static void main(String[] args) {
+//         node a=new node(1);
+//         node b=new node(3);
+//         node c=new node(2);
+//         node d=new node(4);
+//         node e=new node(7);
+//         node f=new node(9);
+
+//         a.left=b;a.right=c;
+//         b.left=d;b.right=e;
+//         c.right=f;
+
+//         size(a);
+//         System.out.println(cnt);
+        
+
+// }
+
+
+
+
+
+
+
 public static class node{
     int data;
     node left;
@@ -175,12 +225,14 @@ public static class node{
     }
 }
 
-public static int displaysize(node root){
+public static int displaylevel(node root){
         
         if (root==null) return 0;
-        return 1+displaysize(root.left)+displaysize(root.right);
+        return 1+Math.max(displaylevel(root.left),displaylevel(root.right));
 
     }
+
+    
 
     public static void main(String[] args) {
         node a=new node(1);
@@ -194,9 +246,7 @@ public static int displaysize(node root){
         b.left=d;b.right=e;
         c.right=f;
 
-        System.out.println(displaysize(a));
-        
-
+        System.out.println(displaylevel(a));
 }
 
 
