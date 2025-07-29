@@ -28,26 +28,37 @@
 
 
 
-Solution 2 (using recursion)
+// Solution 2 (using recursion)
 
 
-class Solution {
-    public int search(int[] nums, int target) {
-        int s=0;
-        int f=nums.length-1;
-        return search(nums,target,s,f);
-    }
+// class Solution {
+//     public int search(int[] nums, int target) {
+//         int s=0;
+//         int f=nums.length-1;
+//         return search(nums,target,s,f);
+//     }
 
-    public static int search(int[] arr, int t, int s, int f){
-        if (s > f) return -1;
-        int mid = s + (f - s) / 2;
+//     public static int search(int[] arr, int t, int s, int f){
+//         if (s > f) return -1;
+//         int mid = s + (f - s) / 2;
 
 
-        if(t== arr[mid]) return mid;
+//         if(t== arr[mid]) return mid;
 
-        if(t<arr[mid]) return search(arr, t, s, mid-1);
+//         if(t<arr[mid]) return search(arr, t, s, mid-1);
 
-        else return search(arr, t,mid+1, f);
+//         else return search(arr, t,mid+1, f);
 
-    }
-}
+//     }
+// }
+
+
+
+// factorial of a number using recursion
+// class Solution {
+//     static int factorial(int n) {
+//     if(n<=1) return 1;
+//     return n*factorial(n-1);
+        
+//     }
+// }
