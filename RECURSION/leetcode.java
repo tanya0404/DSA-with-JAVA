@@ -147,17 +147,73 @@ public class leetcode {
                             //   NUMBER OF STEPS
 
 
-//     public static void steps(int n){
-//         if(n==0) return ;
-//         if(n%2==0){
+// class Solution {
+//     public int numberOfSteps(int num) {
+//         return fun(num,0);
+//     }
+//     public int fun(int n,int c){
+//         if(n==0) return c;
+//         if(n%2==0) {
 //             n=n/2;
-//             steps(n);
+//             c++;
 //         }
+//         if(n%2!=0) {
+//             n=n-1;
+//             c++;
+//         }
+//         return fun(n,c);
 //     }
-//     public static void main(String[] args) {
-//         Scanner s=new Scanner(System.in);
-//         int n=s.nextInt();
+// }
+
+
+                            //  ARRAY IS SORTED OR NOT
+
+
+// class Solution {
+//     public boolean isSorted(int[] arr) {
+//         return helper( arr,0);
+        
 //     }
+//     public boolean helper(int[] arr,int i){
+//         if(i==arr.length-1) return true;
+//         if(arr[i]>arr[i+1]){
+//             return false;
+//         }
+//         return helper(arr,i+1);
+//     }
+// }      
+
+
+
+
+public static void reverse(int[] arr,int s,int e){
+    if(s>=e) return;
+    int temp=arr[s];
+    arr[s]=arr[e];
+    arr[e]=temp;
+    reverse(arr,s+1,e-1);
+
+}
+
+public static void main(String[] args) {
+    int arr[]= {1,2,3,4,5};
+    int s=0;
+    int e=arr.length-1;
+    reverse(arr,s,e);
+
+    for(int i=0;i<arr.length;i++){
+        System.out.print(arr[i]+" ");
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 }
