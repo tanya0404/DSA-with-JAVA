@@ -186,32 +186,59 @@ public class leetcode {
 
 
 
-public static void reverse(int[] arr,int s,int e){
-    if(s>=e) return;
-    int temp=arr[s];
-    arr[s]=arr[e];
-    arr[e]=temp;
-    reverse(arr,s+1,e-1);
+
+                                // REVERSE AN ARRAY
+
+// public static void reverse(int[] arr,int s,int e){
+//     if(s>=e) return;
+//     int temp=arr[s];
+//     arr[s]=arr[e];
+//     arr[e]=temp;
+//     reverse(arr,s+1,e-1);
+
+// }
+
+// public static void main(String[] args) {
+//     int arr[]= {1,2,3,4,5};
+//     int s=0;
+//     int e=arr.length-1;
+//     reverse(arr,s,e);
+
+//     for(int i=0;i<arr.length;i++){
+//         System.out.print(arr[i]+" ");
+//     }
+// }
+
+
+
+
+
+
+
+                                // STRING IS PALINDROME 
+
+public static boolean isPalindrome(char[] arr,int s,int e){
+    if(s>=e) return true;
+    if(arr[s]!=arr[e]){
+        return false;
+    }
+        return isPalindrome(arr,s+1,e-1);
+    
 
 }
 
 public static void main(String[] args) {
-    int arr[]= {1,2,3,4,5};
-    int s=0;
+    Scanner s=new Scanner(System.in);
+    String st= s.nextLine();
+    char arr[] = st.toCharArray();
+    // for(char x: arr)System.out.println(x+" ");
+    int start=0;
     int e=arr.length-1;
-    reverse(arr,s,e);
 
-    for(int i=0;i<arr.length;i++){
-        System.out.print(arr[i]+" ");
-    }
+    boolean ans = isPalindrome(arr,start,e);
+    System.out.println(ans);
+
 }
-
-
-
-
-
-
-
 
 
 
