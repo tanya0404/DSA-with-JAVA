@@ -217,30 +217,53 @@ public class leetcode {
 
                                 // STRING IS PALINDROME 
 
-public static boolean isPalindrome(char[] arr,int s,int e){
-    if(s>=e) return true;
-    if(arr[s]!=arr[e]){
-        return false;
-    }
-        return isPalindrome(arr,s+1,e-1);
+// public static boolean isPalindrome(char[] arr,int s,int e){
+//     if(s>=e) return true;
+//     if(arr[s]!=arr[e]){
+//         return false;
+//     }
+//         return isPalindrome(arr,s+1,e-1);
     
 
+// }
+
+// public static void main(String[] args) {
+//     Scanner s=new Scanner(System.in);
+//     String st= s.nextLine();
+//     char arr[] = st.toCharArray();
+//     // for(char x: arr)System.out.println(x+" ");
+//     int start=0;
+//     int e=arr.length-1;
+
+//     boolean ans = isPalindrome(arr,start,e);
+//     System.out.println(ans);
+
+// }
+
+
+
+
+// public static void remove_a(char[] arr){
+//     StringBuilder str=new StringBuilder();
+//     for(int i=0;i<arr.length;i++){
+//         if(arr[i]!='a') str.append(arr[i]);
+//     }
+//     System.out.println(str);
+// }
+
+public static String remove_a(char[] arr,int s,StringBuilder str){
+    if(s==arr.length) return str.toString();
+    if(arr[s]!='a') str.append(arr[s]);
+    return remove_a(arr, s+1, str);
 }
 
+
 public static void main(String[] args) {
+    StringBuilder str=new StringBuilder();
     Scanner s=new Scanner(System.in);
     String st= s.nextLine();
     char arr[] = st.toCharArray();
-    // for(char x: arr)System.out.println(x+" ");
-    int start=0;
-    int e=arr.length-1;
-
-    boolean ans = isPalindrome(arr,start,e);
-    System.out.println(ans);
-
+    System.out.println(remove_a(arr,0,str));
 }
-
-
-
 
 }
