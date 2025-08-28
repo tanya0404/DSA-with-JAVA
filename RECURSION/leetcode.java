@@ -243,6 +243,8 @@ public class leetcode {
 
 
 
+                                // REMOVE A CHAR FROM A STRING
+
 // public static void remove_a(char[] arr){
 //     StringBuilder str=new StringBuilder();
 //     for(int i=0;i<arr.length;i++){
@@ -251,19 +253,106 @@ public class leetcode {
 //     System.out.println(str);
 // }
 
-public static String remove_a(char[] arr,int s,StringBuilder str){
-    if(s==arr.length) return str.toString();
-    if(arr[s]!='a') str.append(arr[s]);
-    return remove_a(arr, s+1, str);
-}
+// public static String remove_a(char[] arr,int s,StringBuilder str){
+//     if(s==arr.length) return str.toString();
+//     if(arr[s]!='a') str.append(arr[s]);
+//     return remove_a(arr, s+1, str);
+// }
+
+// public static String remove_a(String s,String sub){
+//     if(s.isEmpty()){
+//          return sub;
+//     }
+//     char c=s.charAt(0);
+
+//     if(c=='a'){
+//         return remove_a(s.substring(1), sub);
+//     }
+//     else{
+//         return remove_a(s.substring(1), sub+c);
+//     }
+
+// }
 
 
-public static void main(String[] args) {
-    StringBuilder str=new StringBuilder();
-    Scanner s=new Scanner(System.in);
-    String st= s.nextLine();
-    char arr[] = st.toCharArray();
-    System.out.println(remove_a(arr,0,str));
-}
+// public static void main(String[] args) {
+//     Scanner s=new Scanner(System.in);
+//     String st= s.nextLine();
+//     String result=remove_a(st, " ");
+//     System.out.println(result);
+// }
+
+
+
+// public static void main(String[] args) {
+//     StringBuilder str=new StringBuilder();
+//     Scanner s=new Scanner(System.in);
+//     String st= s.nextLine();
+//     char arr[] = st.toCharArray();
+//     System.out.println(remove_a(arr,0,str));
+// }
+
+
+
+
+
+                                // REMOVE A SUBSTRING FROM A STRING
+
+// public static String remove_str(String p,String up){
+//     if(up.isEmpty()){
+//         return p;
+//     }
+//     char c=up.charAt(0);
+//     if(up.startsWith("apple")){
+//         return remove_str(p, up.substring(5));
+//     }
+//     else{
+//         return remove_str(p+c, up.substring(1));
+//     }
+// }
+
+
+// public static void main(String[] args) {
+//     Scanner s=new Scanner(System.in);
+//     String st= s.nextLine();
+//     String result =remove_str(" ",st);
+//     System.out.println(result);
+    
+// }
+
+
+
+
+// public static String remove_str(String p,String up){
+//     if(up.isEmpty()){
+//         return p;
+//     }
+//     char c=up.charAt(0);
+//     if(up.startsWith("apple")){
+//         return remove_str(p, up.substring(5));
+//     }
+//     else if(up.startsWith("app")&& !up.startsWith("apple")){
+//         return remove_str(p, up.substring(3));
+//     }
+//     else{
+//         return remove_str(p+c, up.substring(1));
+//     }
+// }
+
+
+// public static void main(String[] args) {
+//     Scanner s=new Scanner(System.in);
+//     String st= s.nextLine();
+//     String result =remove_str(" ",st);
+//     System.out.println(result);
+    
+// }
+
+
+                           
+
+
+
+
 
 }
