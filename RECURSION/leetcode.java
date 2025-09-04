@@ -67,6 +67,12 @@ public class leetcode {
 
 
 
+
+
+
+
+
+
                             // Sum Of Digits
 
 
@@ -349,10 +355,33 @@ public class leetcode {
 // }
 
 
-                           
+                            // SUBSEQUENCES
+
+// public static void subseq(String p,String up){
+//     if(up.isEmpty()){
+//         System.out.println(p);
+//         return;
+//     }
+//     char c=up.charAt(0);
+
+//     subseq(p, up.substring(1));
+//     subseq(p+c, up.substring(1));
+// }
+// public static void main(String[] args){
+//     Scanner s= new Scanner(System.in);
+//     String st=s.nextLine();
+//     subseq(" ",st);
+// }                            
+
+
+
 
 
 
 
 
 }
+
+
+
+

@@ -25,3 +25,30 @@
 //     }
 // }
 
+
+
+
+
+
+                //CEIL OF A SORTED ARRAY 
+
+// class Solution {
+//     public int findCeil(int[] arr, int x) {
+//         int s=0;
+//         int e=arr.length-1;
+//         int ans=-1;
+//         while(s<=e){
+//         int mid=s+(e-s)/2;
+        
+//         if(x>arr[mid]){
+//             s=mid+1;
+//         }
+//         else{
+//             ans=mid;
+//             e=mid-1;
+//         }
+//         }
+//         return ans;
+        
+//     }
+// }
