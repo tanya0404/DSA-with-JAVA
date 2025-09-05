@@ -160,3 +160,42 @@
 //         return letters[ans];
 //     }
 // }
+
+
+
+
+
+
+
+//        34. Find First and Last Position of Element in Sorted Array
+
+// class Solution {
+//     public int[] searchRange(int[] nums, int target) {
+//         int s=0;
+//         int e=nums.length-1;
+//         int i=-1;
+//         int j=-1;
+
+//         while(s<=e){
+//             int mid=s+(e-s)/2;
+//             if(target>nums[mid]){
+//                 s=mid+1;
+//             }
+//             else if(target<nums[mid]){
+//                 e=mid-1;
+//             }
+//             else{
+//                 i=mid; 
+//                 j=mid;
+//                 while(i>0 && nums[i-1]==target){
+//                     i--;
+//                 }
+//                 while(j<e && nums[j+1]==target){
+//                     j++;
+//                 }
+//                 break;
+//             }
+//         }
+//         return new int[]{i,j};
+//     }
+//     }
