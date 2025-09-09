@@ -247,3 +247,60 @@
 
 //     }
 // }
+
+
+
+
+//   1095. Find in Mountain Array
+
+
+// class Solution {
+//     public int findInMountainArray(int target, MountainArray mountainArr) {
+//         int peek= findpeek(mountainArr);
+//         int first=bsl(mountainArr,target,0,peek);
+//         if(first != -1) return first;
+
+//         else return bsr(mountainArr,target,peek+1,mountainArr.length()-1);
+
+//     }
+
+//     public int findpeek(MountainArray mountainArr){
+
+//         int s=0;
+//         int e=mountainArr.length()-1;
+
+//         while(s<e){
+//             int mid=s+(e-s)/2;
+
+//             if(mountainArr.get(mid)>mountainArr.get(mid+1)){
+//                 e=mid;
+//             }
+//             else{
+//                 s=mid+1;
+//             }
+//         }
+//         return s;
+//     }
+
+//     public int bsl(MountainArray mountainArr,int target,int s,int e ){
+//         while(s<=e){
+//             int mid=s+(e-s)/2;
+
+//             if(target==mountainArr.get(mid)) return mid;
+//             else if(target>mountainArr.get(mid)) s=mid+1;
+//             else e=mid-1;
+//         }
+//         return -1;
+//     }
+
+//     public int bsr(MountainArray mountainArr,int target,int s,int e ){
+//         while(s<=e){
+//             int mid=s+(e-s)/2;
+
+//             if(target==mountainArr.get(mid)) return mid;
+//             else if(target<mountainArr.get(mid)) s=mid+1;
+//             else e=mid-1;
+//         }
+//         return -1;
+//     }
+// }
