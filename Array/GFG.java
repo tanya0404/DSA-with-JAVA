@@ -95,36 +95,41 @@ public class GFG {
 //      Find position of an element in a sorted array of infinite numbers
 
 
-public static int idx(int[] arr,int k){
-        int s=0;
-        int e=1;
+// public static int idx(int[] arr,int k){
+//         int s=0;
+//         int e=1;
 
-        while(e<arr.length && arr[e]<k){
-            int temp=e+1;
-            e=e+(e-s+1)*2;
-            s=temp;
-        }
-        return find(arr, k, s, e);
-}
-public static int find(int[] arr, int k,int s,int e){
-    while(s<=e){
-        int mid=s+(e-s)/2;
+//         while(e<arr.length && arr[e]<k){
+//             int temp=e+1;
+//             e=e+(e-s+1)*2;
+//             s=temp;
+//         }
+//         return find(arr, k, s, e);
+// }
+// public static int find(int[] arr, int k,int s,int e){
+//     while(s<=e){
+//         int mid=s+(e-s)/2;
 
-        if(k==arr[mid])  return mid;
+//         if(k==arr[mid])  return mid;
 
-        else if(k>arr[mid]) s=mid+1;
+//         else if(k>arr[mid]) s=mid+1;
 
-        else{ e=mid-1;}
-    }
-    return -1;
+//         else{ e=mid-1;}
+//     }
+//     return -1;
     
-}
-public static void main(String[] args) {
-    int[] arr={12,33,42,55,67,84,90,150,163,170,211};
-    int k = 170;
-    int ans=idx(arr, k);
-    System.out.println(ans);
-}
+// }
+// public static void main(String[] args) {
+//     int[] arr={12,33,42,55,67,84,90,150,163,170,211};
+//     int k = 170;
+//     int ans=idx(arr, k);
+//     System.out.println(ans);
+// }
+
+
+
+
+
 
 
 

@@ -199,3 +199,51 @@
 //         return new int[]{i,j};
 //     }
 //     }
+
+
+
+
+//       852. Peak Index in a Mountain Array
+
+// class Solution {
+//     public int peakIndexInMountainArray(int[] arr) {
+
+        //   BASIC APPROCH
+
+    //     int i=0;
+    //     int j=1;
+    //     int ans=0;
+    //     while(j<arr.length-1){
+    //         if(arr[i]<arr[j]){
+    //             ans=j;
+    //             i++;
+    //             j++;
+    //         }
+    //         else{
+    //             break;
+    //         }
+    //     }
+    //     return ans;
+    // }
+
+
+    //    BS APPROCH OPTIMIZED
+
+//     int s=0;
+//     int e=arr.length-1;
+
+//     while(s<e){
+//         int mid =s+(e-s)/2;
+//         if(arr[mid]>arr[mid+1]){
+//             e=mid;
+//         }
+//         else{
+//             s=mid+1;
+            
+            
+//         }
+//     }
+//     return e;
+
+//     }
+// }
